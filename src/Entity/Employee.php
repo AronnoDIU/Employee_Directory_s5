@@ -20,28 +20,28 @@ class Employee
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $firstName;
+    private ?string $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lastName;
+    private ?string $lastName;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Department")
      * orm\JoinColumn(nullable=false)
      */
-    private $department;
+    private ?string $department;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Role")
      */
-    private $role;
+    private ?string $role;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $salary;
+    private ?int $salary;
 
     public function getId(): ?int
     {
