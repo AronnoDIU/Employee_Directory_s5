@@ -28,12 +28,13 @@ class Employee
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Department")
+     * orm\JoinColumn(nullable=false)
      */
     private $department;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Role")
      */
     private $role;
 
